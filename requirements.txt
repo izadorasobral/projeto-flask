@@ -3,3 +3,4 @@ SQLAlchemy
 Flask-Login
 pytest
 sendgrid
+flask_sqlalchemy 
