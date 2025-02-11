@@ -1,3 +1,4 @@
+markdown
 # Projeto Flask 🚀
 
 Este projeto configura e implementa uma aplicação Flask com funcionalidades de registro de usuário, login, gerenciamento de tarefas e redefinição de senha via email.
@@ -5,15 +6,11 @@ Este projeto configura e implementa uma aplicação Flask com funcionalidades de
 ## Visão Geral
 
 A aplicação é composta pelos seguintes componentes principais:
-- **Flask**: Microframework para desenvolvimento web em Python.
-- **SQLAlchemy**: ORM para interação com banco de dados.
-- **Flask-Login**: Gerenciamento de sessões de usuário.
-- **SendGrid**: Envio de emails para redefinição de senha.
-- **Pytest**: Framework para testes automatizados.
-
-## Estrutura do Projeto
-
-├── .github/workflows/ │ └── ci.yml# Workflow de CI para testes automatizados ├── app/ │ ├── init.py # Inicialização da aplicação Flask │ ├── models.py# Definição dos modelos de banco de dados │ ├── routes.py# Definição das rotas da aplicação │ ├── templates/ # Templates HTML para a aplicação │ │ ├── dashboard.html│ │ ├── home.html│ │ ├── login.html│ │ ├── profile.html│ │ ├── register.html│ │ ├── reset_password.html │ │ └── tasks.html│ ├── static/ │ └── styles.css# Arquivo de estilo CSS ├── instance/ │ └── database.db# Banco de dados SQLite ├── tests/ │ └── test_routes.py # Testes automatizados para as rotas ├── venv/ # Ambiente virtual ├── .gitignore # Arquivos e pastas ignorados pelo Git ├── README.md# Documentação do projeto └── requirements.txt# Dependências do projeto
+- **Flask**: Microframework para desenvolvimento web em Python, usado para construir a estrutura principal da aplicação.
+- **SQLAlchemy**: ORM para interação com banco de dados, utilizado para gerenciar os dados dos usuários e das tarefas.
+- **Flask-Login**: Gerenciamento de sessões de usuário, responsável por manter os usuários logados e proteger as rotas que requerem autenticação.
+- **SendGrid**: Serviço utilizado para o envio de emails de redefinição de senha, garantindo que os usuários possam recuperar suas contas.
+- **Pytest**: Framework para testes automatizados, utilizado para garantir que todas as funcionalidades da aplicação estejam funcionando corretamente.
 
 
 ## Configuração e Implementação
@@ -47,6 +44,23 @@ Para rodar os testes, execute:
 
 sh
 pytest
+4. Funcionalidades da Aplicação
+Registro de Usuário
+Permite que novos usuários se registrem na aplicação fornecendo um email e uma senha.
+
+Login de Usuário
+Permite que usuários registrados façam login na aplicação fornecendo suas credenciais.
+
+Gerenciamento de Tarefas
+Permite que usuários autenticados criem, atualizem e excluam tarefas. As tarefas são associadas ao usuário que as criou.
+
+Redefinição de Senha via Email
+Permite que usuários recuperem suas contas através de um email de redefinição de senha enviado pelo SendGrid.
+
+5. Monitoramento e Alertas
+Configuração de alertas para eventos importantes na aplicação.
+
+Dashboard de monitoramento para acompanhar o desempenho em tempo real.
 
 ## Contribuição
 Se quiser contribuir, sinta-se à vontade para abrir uma issue ou enviar um pull request!
