@@ -3,4 +3,3 @@ SQLAlchemy
 Flask-Login
 pytest
 sendgrid
-
