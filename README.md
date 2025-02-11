@@ -35,23 +35,18 @@ sh
 pip install -r requirements.txt
 Configure a variável SENDGRID_API_KEY no arquivo app/routes.py com sua chave de API do SendGrid.
 
-### 2. Deploy da Aplicação
+2. Deploy da Aplicação
 Inicie a aplicação:
 
 sh
 flask run
 Acesse a aplicação em http://127.0.0.1:5000.
 
-### 3. Testes
+3. Testes
 Para rodar os testes, execute:
 
 sh
 pytest
-
-### 4. Monitoramento e Alertas
-Configuração de alertas para eventos importantes na aplicação.
-
-Dashboard de monitoramento para acompanhar o desempenho em tempo real.
 
 ## Contribuição
 Se quiser contribuir, sinta-se à vontade para abrir uma issue ou enviar um pull request!
