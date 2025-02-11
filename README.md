@@ -15,7 +15,7 @@ A aplicação é composta pelos seguintes componentes principais:
 
 ## Configuração e Implementação
 
-### 1. Clone este repositório:
+1. Clone este repositório: 
    ```sh
    git clone https://github.com/izadorasobral/projeto-flask.git
    cd projeto-flask
@@ -60,8 +60,6 @@ Permite que usuários recuperem suas contas através de um email de redefiniçã
 Configuração de alertas para eventos importantes na aplicação.
 
 Dashboard de monitoramento para acompanhar o desempenho em tempo real.
-
- ### 
 
 ## Contribuição
 Se quiser contribuir, sinta-se à vontade para abrir uma issue ou enviar um pull request!
