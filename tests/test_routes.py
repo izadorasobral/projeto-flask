@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
+=======
+>>>>>>> 219be471f3877456075f0426714630602e9b156c
 import pytest
 from app import create_app, db
 from app.models import User, Task

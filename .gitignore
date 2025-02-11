@@ -141,6 +141,9 @@ dist
 # SvelteKit build / generate output
 .svelte-kit
 
+<<<<<<< HEAD
 .pytest_cache/
 
+=======
+>>>>>>> 219be471f3877456075f0426714630602e9b156c
 # End of https://www.toptal.com/developers/gitignore/api/node

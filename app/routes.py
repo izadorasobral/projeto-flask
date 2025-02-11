@@ -1,14 +1,21 @@
 from flask import Blueprint, render_template, request, redirect, url_for, flash
 from flask_login import login_user, login_required, logout_user, current_user
+<<<<<<< HEAD
 import sendgrid
 from sendgrid.helpers.mail import Mail, Email, To, Content
+=======
+from werkzeug.security import generate_password_hash, check_password_hash
+>>>>>>> 219be471f3877456075f0426714630602e9b156c
 from .models import db, User, Task
 
 main = Blueprint('main', __name__)
 
+<<<<<<< HEAD
 # Configurar a API Key do SendGrid
 sg = sendgrid.SendGridAPIClient(api_key='YOUR_SENDGRID_API_KEY')
 
+=======
+>>>>>>> 219be471f3877456075f0426714630602e9b156c
 @main.route('/')
 def home():
     return render_template('home.html')
@@ -19,7 +26,11 @@ def login():
         email = request.form['email']
         password = request.form['password']
         user = User.query.filter_by(email=email).first()
+<<<<<<< HEAD
         if user and user.check_password(password):
+=======
+        if user and check_password_hash(user.password, password):
+>>>>>>> 219be471f3877456075f0426714630602e9b156c
             login_user(user)
             return redirect(url_for('main.dashboard'))
         else:
@@ -79,8 +90,13 @@ def register():
     if request.method == 'POST':
         email = request.form['email']
         password = request.form['password']
+<<<<<<< HEAD
         new_user = User(email=email)
         new_user.set_password(password)
+=======
+        hashed_password = generate_password_hash(password, method='sha256')
+        new_user = User(email=email, password=hashed_password)
+>>>>>>> 219be471f3877456075f0426714630602e9b156c
         db.session.add(new_user)
         db.session.commit()
         return redirect(url_for('main.login'))
@@ -102,6 +118,7 @@ def reset_password():
         email = request.form['email']
         user = User.query.filter_by(email=email).first()
         if user:
+<<<<<<< HEAD
             # Enviar email com link de redefinição de senha
             message = Mail(
                 from_email=Email('no-reply@seusite.com'),
@@ -113,6 +130,9 @@ def reset_password():
                 )
             )
             sg.send(message)
+=======
+            # Enviar email com link de redefinição de senha (implementação necessária)
+>>>>>>> 219be471f3877456075f0426714630602e9b156c
             flash('Um email com instruções de recuperação de senha foi enviado.')
         else:
             flash('Email não encontrado.')

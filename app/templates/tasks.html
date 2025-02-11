@@ -1,10 +1,18 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en">
+=======
+<html lang="pt-BR">
+>>>>>>> 219be471f3877456075f0426714630602e9b156c
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciar Tarefas</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+=======
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+>>>>>>> 219be471f3877456075f0426714630602e9b156c
 </head>
 <body>
     <h1>Gerenciar Tarefas</h1>
@@ -12,7 +20,11 @@
     <!-- Formulário para adicionar tarefa -->
     <form action="{{ url_for('main.manage_tasks') }}" method="POST">
         <label for="name">Nome da Tarefa:</label>
+<<<<<<< HEAD
         <input type="text" id="name" name="name" required>
+=======
+        <input type="text" id="name" name="name" required aria-required="true">
+>>>>>>> 219be471f3877456075f0426714630602e9b156c
         <button type="submit">Adicionar Tarefa</button>
     </form>
 
@@ -23,16 +35,51 @@
 
             <!-- Formulário para atualizar tarefa -->
             <form action="{{ url_for('main.update_task', id=task.id) }}" method="POST" class="inline-form update-form">
+<<<<<<< HEAD
                 <input type="text" name="name" placeholder="Atualizar Tarefa" required>
                 <button type="submit">Atualizar</button>
+=======
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <input type="text" name="name" placeholder="Atualizar Tarefa" required aria-required="true">
+                <button type="submit" aria-label="Atualizar Tarefa">Atualizar</button>
+                <button type="button" class="cancel-button" aria-label="Cancelar Atualização">Cancelar</button>
+>>>>>>> 219be471f3877456075f0426714630602e9b156c
             </form>
 
             <!-- Formulário para deletar tarefa -->
             <form action="{{ url_for('main.delete_task', id=task.id) }}" method="POST" class="inline-form">
+<<<<<<< HEAD
                 <button type="submit">Deletar</button>
             </form>
         </li>
     
     </ul>
+=======
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <button type="submit" aria-label="Deletar Tarefa">Deletar</button>
+            </form>
+        </li>
+
+    </ul>
+
+    <script>
+        // Script para mostrar/ocultar o formulário de atualização
+        document.querySelectorAll('.cancel-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const form = button.closest('form');
+                form.reset(); // Limpa o formulário
+                form.style.display = 'none'; // Oculta o formulário
+            });
+        });
+
+        // Script para mostrar o formulário de atualização ao clicar no nome da tarefa
+        document.querySelectorAll('.task-name').forEach(taskName => {
+            taskName.addEventListener('click', () => {
+                const updateForm = taskName.nextElementSibling;
+                updateForm.style.display = 'block'; // Mostra o formulário de atualização
+            });
+        });
+    </script>
+>>>>>>> 219be471f3877456075f0426714630602e9b156c
 </body>
 </html>
