@@ -15,9 +15,7 @@ A aplicação é composta pelos seguintes componentes principais:
 
 ## Configuração e Implementação
 
-### 1. Configuração Inicial
-
-1. Clone este repositório:
+### 1. Clone este repositório:
    ```sh
    git clone https://github.com/izadorasobral/projeto-flask.git
    cd projeto-flask
@@ -44,23 +42,26 @@ Para rodar os testes, execute:
 
 sh
 pytest
+
 4. Funcionalidades da Aplicação
-Registro de Usuário
+-Registro de Usuário
 Permite que novos usuários se registrem na aplicação fornecendo um email e uma senha.
 
-Login de Usuário
+-Login de Usuário
 Permite que usuários registrados façam login na aplicação fornecendo suas credenciais.
 
-Gerenciamento de Tarefas
+-Gerenciamento de Tarefas
 Permite que usuários autenticados criem, atualizem e excluam tarefas. As tarefas são associadas ao usuário que as criou.
 
-Redefinição de Senha via Email
+-Redefinição de Senha via Email
 Permite que usuários recuperem suas contas através de um email de redefinição de senha enviado pelo SendGrid.
 
 5. Monitoramento e Alertas
 Configuração de alertas para eventos importantes na aplicação.
 
 Dashboard de monitoramento para acompanhar o desempenho em tempo real.
+
+ ### 
 
 ## Contribuição
 Se quiser contribuir, sinta-se à vontade para abrir uma issue ou enviar um pull request!
