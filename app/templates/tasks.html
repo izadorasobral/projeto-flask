@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Tarefas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Gerenciar Tarefas</h1>
+
+    <!-- Formulário para adicionar tarefa -->
+    <form action="{{ url_for('main.manage_tasks') }}" method="POST">
+        <label for="name">Nome da Tarefa:</label>
+        <input type="text" id="name" name="name" required>
+        <button type="submit">Adicionar Tarefa</button>
+    </form>
+
+    <!-- Lista de tarefas -->
+    <ul>
+        <li class="task-item">
+            <div class="task-name">{{ task.name }}</div>
+
+            <!-- Formulário para atualizar tarefa -->
+            <form action="{{ url_for('main.update_task', id=task.id) }}" method="POST" class="inline-form update-form">
+                <input type="text" name="name" placeholder="Atualizar Tarefa" required>
+                <button type="submit">Atualizar</button>
+            </form>
+
+            <!-- Formulário para deletar tarefa -->
+            <form action="{{ url_for('main.delete_task', id=task.id) }}" method="POST" class="inline-form">
+                <button type="submit">Deletar</button>
+            </form>
+        </li>
+    
+    </ul>
+</body>
+</html>
